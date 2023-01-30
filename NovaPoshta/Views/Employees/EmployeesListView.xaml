@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="NovaPoshta.Views.Employees.EmployeesListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NovaPoshta.Views.Employees"
+              xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.45*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Style="{StaticResource WhiteBorder}" Margin="0,15,15,15" Grid.ColumnSpan="4" Grid.RowSpan="3">
+            <StackPanel Orientation="Vertical">
+                <DockPanel>
+                    <TextBlock VerticalAlignment="Center" Style="{StaticResource Header}" FontSize="32">
+                        Робітники
+                    </TextBlock>
+
+                    <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
+                </DockPanel>
+                
+            </StackPanel>
+           
+
+        </Border>
+        <TextBox Grid.ColumnSpan="3" Style="{StaticResource TextBoxDefaultStyle}" 
+                 Grid.Row="1" Height="30"
+                 VerticalAlignment="Top" Margin="40,0,0,0"></TextBox>
+        <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource DarkRedButton}" Width="100" VerticalAlignment="Top">
+            <Image Source="/Resources/icons/search.png" Width="30"></Image>
+        </Button>
+    </Grid>
+</UserControl>

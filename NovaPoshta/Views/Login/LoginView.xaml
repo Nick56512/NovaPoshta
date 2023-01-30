@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NovaPoshta.Views.Login"
+              xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
@@ -12,60 +13,45 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Padding="30" 
-                BorderBrush="Red" 
-                CornerRadius="15" 
-                Width="360"
-                Height="350"
-                Background="White">
+        <Border Style="{StaticResource WhiteBorder}" Width="360" Height="350">
             <StackPanel Orientation="Vertical">
                 <DockPanel>
-                    <TextBlock 
-                               VerticalAlignment="Center"
-                               FontSize="30"
-                               FontWeight="Bold"
-                               Foreground="DarkRed"
-                               FontFamily="Commissioner">
+                    <TextBlock Style="{StaticResource Header}"
+                               VerticalAlignment="Center">
                         Авторизація
                     </TextBlock>
-                  
+
                     <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
-                    
+
                 </DockPanel>
                 <StackPanel Margin="0,15,0,0">
-                    <TextBlock Text="Логін" FontWeight="DemiBold" Foreground="DarkRed" FontFamily="Commissioner" HorizontalAlignment="Left" FontSize="18" ></TextBlock>
-                    <Border CornerRadius="5" BorderBrush="DarkRed" BorderThickness="2"
-                         Background="WhiteSmoke"
-                                 VerticalAlignment="Center" UseLayoutRounding="True"
-                                 >
-                        <TextBox BorderThickness="0" 
-                                 FontSize="17"
-                                 Margin="5"
-                                Background="WhiteSmoke"
-                                 x:Name="PasswordBox"
-                                 />
+                    <TextBlock Text="Логін" Style="{StaticResource TextBoxLabel}"></TextBlock>
+                    <Border Style="{StaticResource TextBoxBorder}">
+                        <TextBox Style="{StaticResource TextBoxDefaultStyle}"/>
                     </Border>
                 </StackPanel>
                 <StackPanel Margin="0,35,0,0">
-                    <TextBlock Text="Пароль" HorizontalAlignment="Left" FontSize="18"
-                               FontWeight="DemiBold"
-                               Foreground="DarkRed" FontFamily="Commissioner"></TextBlock>
-                    <Border CornerRadius="5" BorderBrush="DarkRed" BorderThickness="2"
-                                 VerticalAlignment="Center" UseLayoutRounding="True"
-                          Background="WhiteSmoke"
-                                 >
-                        <PasswordBox BorderThickness="0" 
-                                  Background="WhiteSmoke"
-                                 FontSize="17"
-                                 Margin="5"
-                                 x:Name="PasswordBo"
-                                 />
+                    <TextBlock Text="Пароль" Style="{StaticResource TextBoxLabel}"></TextBlock>
+                    <Border Style="{StaticResource TextBoxBorder}">
+                        <PasswordBox Style="{StaticResource PassBoxDefaultStyle}"
+                                 x:Name="PasswordBox"/>
                     </Border>
-                  
+
                 </StackPanel>
+                <Border Style="{StaticResource ButtonBorder}"
+                        VerticalAlignment="Center" UseLayoutRounding="True"
+                        Width="120" Height="40"
+                        BorderBrush="#67100B"
+                        Margin="20" Background="#67100B">
+                    <Button Width="120" Height="40" Style="{StaticResource DarkRedButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource ButtonLabel}" Margin="0,0,20,0">Вхід</TextBlock>
+                            <Image Source="/Resources/icons/exit1.png" Width="30"></Image>
+                        </StackPanel>
+                    </Button>
+                </Border>
             </StackPanel>
-           
         </Border>
-        <Image Grid.Column="1" Width="300" Source="/Resources/icons/image 1.png"></Image>
+        <Image Grid.Column="1" Width="400" Source="/Resources/icons/image 1.png"></Image>
     </Grid>
 </UserControl>

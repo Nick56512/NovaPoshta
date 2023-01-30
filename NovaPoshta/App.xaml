@@ -4,6 +4,99 @@
              xmlns:local="clr-namespace:NovaPoshta"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="ButtonLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style x:Key="Header" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="DarkRed"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+        </Style>
+        
+        <Style TargetType="Border" x:Key="ButtonBorder">
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+        </Style>
+        <Style TargetType="Border" x:Key="WhiteBorder">
+            <Setter Property="Padding" Value="30"></Setter>
+            <Setter Property="CornerRadius" Value="15"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+        </Style>
+        <Style TargetType="Border" x:Key="TextBoxBorder">
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="BorderBrush" Value="DarkRed"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="UseLayoutRounding" Value="True"></Setter>
+            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+          
+        </Style>
+        
+        <Style TargetType="{x:Type Button}" x:Key="DarkRedButton">
+            <Setter Property="Background" Value="#67100B"/>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF392E"/>
+                </Trigger>
+            </Style.Triggers>
+           
+        </Style>
+        <Style x:Key="TextBoxLabel" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="Foreground" Value="DarkRed"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+        </Style>
+
+        <Style x:Key="TextBoxDefaultStyle" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style x:Key="PassBoxDefaultStyle" TargetType="PasswordBox">
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style x:Key="MenuItem" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#67100B"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
     </Application.Resources>
 </Application>

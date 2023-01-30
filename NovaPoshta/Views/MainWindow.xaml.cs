@@ -20,8 +20,16 @@ namespace NovaPoshta
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Color BackColorRed1 = (Color)ColorConverter.ConvertFromString("#67100B");
+        public Color BackColorRed2 = (Color)ColorConverter.ConvertFromString("#FF392E");
         public MainWindow()
         {
+            LinearGradientBrush myGradientBrush = new LinearGradientBrush();
+            myGradientBrush.StartPoint = new Point(0.5, 0);
+            myGradientBrush.EndPoint = new Point(0.5, 4);
+            myGradientBrush.GradientStops.Add(new GradientStop(BackColorRed1, 0));
+            myGradientBrush.GradientStops.Add(new GradientStop(BackColorRed2, 0.80));
+            this.Background = myGradientBrush;
             InitializeComponent();
         }
     }

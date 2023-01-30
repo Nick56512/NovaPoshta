@@ -36,3 +36,8 @@ C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.csproj.GenerateReso
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.csproj.CoreCompileInputs.cache
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.exe
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.pdb
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\HomeView\HomeView.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\HomeView\HomeView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\EmployeesListView.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\App.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\EmployeesListView.baml

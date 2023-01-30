@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\oleks\source\repos\NovaPoshta\NovaPoshta\obj\Debug\
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\
 NovaPoshta
 none
 false
 DEBUG;TRACE
-C:\Users\oleks\source\repos\NovaPoshta\NovaPoshta\App.xaml
-21903642364
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\App.xaml
+4617689983
 
-121464347969
+17839598644
 13-1310406943
-Views\Login\LoginView.xaml;Views\MainWindow.xaml;
+Views\Employees\EmployeesListView.xaml;Views\HomeView\HomeView.xaml;Views\Login\LoginView.xaml;Views\MainWindow.xaml;
 
 False
 

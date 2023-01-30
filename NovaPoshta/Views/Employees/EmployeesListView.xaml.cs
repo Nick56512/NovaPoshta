@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NovaPoshta.Views.Login
+namespace NovaPoshta.Views.Employees
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for EmployeesListView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
-    { 
-        public LoginView()
+    public partial class EmployeesListView : UserControl
+    {
+        public EmployeesListView()
         {
             InitializeComponent();
         }
