@@ -17,27 +17,27 @@
         </Grid.ColumnDefinitions>
         
         <StackPanel Orientation="Vertical">
-            <Image Grid.Column="0" Width="170" Source="/Resources/icons/image 1.png" HorizontalAlignment="Left"></Image>
+            <Image Grid.Column="0" Width="170" Source="/Resources/icons/image 1.png" HorizontalAlignment="Left" Margin="15"></Image>
             <Button Margin="0,60,0,0" Style="{StaticResource MenuItem}">
                 <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
-                    <Image Source="/Resources/icons/courier (1).png" Width="50" HorizontalAlignment="Left" Margin="10"></Image>
-                    <TextBlock Style="{StaticResource ButtonLabel}" Padding="20">
+                    <Image Source="/Resources/icons/courier (1).png" Width="60" HorizontalAlignment="Left" Margin="10"></Image>
+                    <TextBlock Style="{StaticResource ButtonLabel}" FontSize="19" Padding="20">
                         Робітники
                     </TextBlock>
                 </DockPanel>
             </Button>
             <Button Margin="0,20,0,0" Style="{StaticResource MenuItem}">
                 <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
-                    <Image Source="/Resources/icons/location-pin.png" Width="50" HorizontalAlignment="Left" Margin="10"></Image>
-                    <TextBlock Style="{StaticResource ButtonLabel}" Padding="20">
+                    <Image Source="/Resources/icons/location-pin.png" Width="60" HorizontalAlignment="Left" Margin="10"></Image>
+                    <TextBlock Style="{StaticResource ButtonLabel}" FontSize="19" Padding="20">
                         Поштомати
                     </TextBlock>
                 </DockPanel>
             </Button>
             <Button Margin="0,20,0,0" Style="{StaticResource MenuItem}">
                 <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
-                    <Image Source="/Resources/icons/notification.png" Width="50" HorizontalAlignment="Left" Margin="10"></Image>
-                    <TextBlock Style="{StaticResource ButtonLabel}" Padding="20">
+                    <Image Source="/Resources/icons/notification.png" Width="60" HorizontalAlignment="Left" Margin="10"></Image>
+                    <TextBlock Style="{StaticResource ButtonLabel}" FontSize="19" Padding="20">
                         Сповіщення
                     </TextBlock>
                 </DockPanel>
@@ -51,7 +51,7 @@
                 </TextBlock>
             </DockPanel>
         </Button>
-        <ContentControl Grid.Column="1" Content="{Binding CurrentHomePage}"></ContentControl>
+        <ContentControl Margin="0,15,15,15" Grid.Column="1" Content="{Binding CurrentHomePage}"></ContentControl>
     </Grid>
 
 </UserControl>

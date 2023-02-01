@@ -10,35 +10,97 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.45*"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Style="{StaticResource WhiteBorder}" Margin="0,15,15,15" Grid.ColumnSpan="4" Grid.RowSpan="3">
+        <Border Style="{StaticResource WhiteBorder}" Grid.ColumnSpan="5" Grid.RowSpan="4">
             <StackPanel Orientation="Vertical">
                 <DockPanel>
                     <TextBlock VerticalAlignment="Center" Style="{StaticResource Header}" FontSize="32">
                         Робітники
                     </TextBlock>
 
-                    <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
+                        <TextBlock Style="{StaticResource Paragraph}" Margin="5">Прізвище Ім'я</TextBlock>
+                    </StackPanel>
                 </DockPanel>
-                
+
             </StackPanel>
-           
+            
 
         </Border>
-        <TextBox Grid.ColumnSpan="3" Style="{StaticResource TextBoxDefaultStyle}" 
-                 Grid.Row="1" Height="30"
-                 VerticalAlignment="Top" Margin="40,0,0,0"></TextBox>
-        <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource DarkRedButton}" Width="100" VerticalAlignment="Top">
-            <Image Source="/Resources/icons/search.png" Width="30"></Image>
-        </Button>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="4">
+            <TextBox Style="{StaticResource TextBoxDefaultStyle}" 
+                 Height="30"
+                     Width="570"
+                 VerticalAlignment="Top" Margin="10,0,0,0"></TextBox>
+         
+             <Button Style="{StaticResource LightRedButton}"
+                     VerticalAlignment="Top"
+                     Width="50"
+                     >
+                  <Image Source="/Resources/icons/search.png" Width="30"></Image>
+             </Button>
+           
+        </StackPanel>
+        <Button Style="{StaticResource LightRedButton}"  Grid.Column="0" Grid.Row="2" Width="140" Height="30">Сортування</Button>
+        <Button Style="{StaticResource LightRedButton}" Grid.Column="1" Grid.Row="2" Width="140" Height="30">Додати</Button>
+        <Button Style="{StaticResource LightRedButton}" Grid.Column="2" Grid.Row="2" Width="140" Height="30">Редагувати</Button>
+        <Button Style="{StaticResource LightRedButton}" Width="140" Grid.Column="3" Grid.Row="2" Height="30">Видалити</Button>
+        <DataGrid 
+            Grid.Column="0" 
+            Grid.Row="3"
+            Grid.ColumnSpan="4"
+            Style="{StaticResource Grid}"
+            ColumnHeaderStyle="{StaticResource ColumnHeader}"
+            RowStyle="{StaticResource Row}">
+
+
+
+
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="№"
+                                   
+                                    Binding="{Binding Title}"
+                                    
+                                    />
+                <DataGridTextColumn Header="ПІБ"
+                                    Binding="{Binding Genre}"
+                                
+                                    />
+                <DataGridTextColumn Header="Дата народження"
+                                    Binding="{Binding Publisher}"
+                                   
+                                    >
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Номер телефону"
+                                    Binding="{Binding Author}">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Поштомат"
+                    Binding="{Binding Rating}">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+
+
+
+
+
+
     </Grid>
 </UserControl>

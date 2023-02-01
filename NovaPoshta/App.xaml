@@ -16,6 +16,13 @@
             <Setter Property="Foreground" Value="DarkRed"></Setter>
             <Setter Property="FontFamily" Value="Commissioner"></Setter>
         </Style>
+        <Style x:Key="Paragraph" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
         <Style TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="17"></Setter>
             <Setter Property="FontFamily" Value="Commissioner"></Setter>
@@ -45,7 +52,16 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}">
+                        <Border 
+                            CornerRadius="3"
+                            BorderThickness="1"
+                            VerticalAlignment="Center" 
+                            UseLayoutRounding="True"
+                            BorderBrush="{TemplateBinding Background}"
+                            Background="{TemplateBinding Background}"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                                >
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
@@ -56,8 +72,39 @@
                     <Setter Property="Background" Value="#FF392E"/>
                 </Trigger>
             </Style.Triggers>
-           
         </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="LightRedButton">
+            <Setter Property="Background" Value="#FF392E"/>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+                                HorizontalAlignment="Center"
+                UseLayoutRounding="True" 
+                BorderBrush="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}"
+                Style="{StaticResource ButtonBorder}"
+                VerticalAlignment="Center" 
+                Background="{TemplateBinding Background}"
+                                >
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#67100B"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
         <Style x:Key="TextBoxLabel" TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Left"></Setter>
             <Setter Property="FontSize" Value="18"></Setter>
@@ -98,5 +145,32 @@
             </Style.Triggers>
         </Style>
 
+        <Style x:Key="Grid" TargetType="DataGrid">
+            <Setter Property="AutoGenerateColumns" Value="False"></Setter>
+            <Setter Property="GridLinesVisibility" Value="None"></Setter>
+            <Setter Property="CanUserDeleteRows" Value="False"></Setter>
+            <Setter Property="CanUserResizeRows" Value="False"></Setter>
+            <Setter Property="CanUserSortColumns" Value="False"></Setter>
+            <Setter Property="CanUserResizeColumns" Value="False"></Setter>
+            <Setter Property="ColumnWidth" Value="*"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="CanUserDeleteRows" Value="False"></Setter>
+            <Setter Property="CanUserAddRows" Value="False"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="FontFamily" Value="Commissioner"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="CanUserReorderColumns" Value="False"></Setter>
+        </Style>
+        <Style x:Key="Row" TargetType="DataGridRow">
+            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+        <Style x:Key="ColumnHeader" TargetType="DataGridColumnHeader">
+            <Setter Property="BorderThickness" Value="0,0,0,2"></Setter>
+            <Setter Property="BorderBrush" Value="Red"></Setter>
+            <Setter Property="Padding" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

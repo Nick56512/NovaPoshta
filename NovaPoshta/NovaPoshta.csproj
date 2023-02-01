@@ -55,6 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AuthenticationService.cs" />
+    <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\AddPoshtomatViewModel.cs" />
+    <Compile Include="Views\Employees\AddEmployeeView.xaml.cs">
+      <DependentUpon>AddEmployeeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Poshtomats\AddPoshtomatView.xaml.cs">
+      <DependentUpon>AddPoshtomatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Poshtomats\PoshtomatsListView.xaml.cs">
+      <DependentUpon>PoshtomatsListView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Employees\AddEmployeeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Employees\EmployeesListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +112,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Poshtomats\AddPoshtomatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Poshtomats\PoshtomatsListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -124,9 +148,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Resources\images\" />
-    <Folder Include="Views\Poshtomats\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\icons\courier %281%29.png" />
@@ -146,6 +168,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\icons\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\add.png" />
+    <Resource Include="Resources\icons\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NovaPoshta.BusinessLogic\NovaPoshta.BusinessLogic.csproj">
+      <Project>{22e96f2d-047c-4720-8ce8-392335995fc8}</Project>
+      <Name>NovaPoshta.BusinessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

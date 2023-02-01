@@ -1,0 +1,12 @@
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\NovaPoshta.BusinessLogic.dll.config
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\NovaPoshta.BusinessLogic.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\NovaPoshta.BusinessLogic.pdb
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\EntityFramework.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\EntityFramework.xml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\obj\Debug\NovaPoshta.BusinessLogic.csproj.AssemblyReference.cache
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\obj\Debug\NovaPoshta.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\obj\Debug\NovaPoshta.BusinessLogic.csproj.CopyComplete
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\obj\Debug\NovaPoshta.BusinessLogic.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta.BusinessLogic\obj\Debug\NovaPoshta.BusinessLogic.pdb

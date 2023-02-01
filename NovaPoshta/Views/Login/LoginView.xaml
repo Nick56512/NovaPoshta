@@ -38,18 +38,14 @@
                     </Border>
 
                 </StackPanel>
-                <Border Style="{StaticResource ButtonBorder}"
-                        VerticalAlignment="Center" UseLayoutRounding="True"
-                        Width="120" Height="40"
-                        BorderBrush="#67100B"
-                        Margin="20" Background="#67100B">
-                    <Button Width="120" Height="40" Style="{StaticResource DarkRedButton}">
+               
+                    <Button Width="120" Height="40" Style="{StaticResource DarkRedButton}" Margin="20">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource ButtonLabel}" Margin="0,0,20,0">Вхід</TextBlock>
                             <Image Source="/Resources/icons/exit1.png" Width="30"></Image>
                         </StackPanel>
                     </Button>
-                </Border>
+               
             </StackPanel>
         </Border>
         <Image Grid.Column="1" Width="400" Source="/Resources/icons/image 1.png"></Image>

@@ -41,3 +41,15 @@ C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\HomeView\HomeView.baml
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\EmployeesListView.g.cs
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\App.baml
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\EmployeesListView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\PoshtomatsListView.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\PoshtomatsListView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\AddEmployeeView.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\AddEmployeeView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\AddPoshtomatView.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\AddPoshtomatView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\NovaPoshta.BusinessLogic.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\EntityFramework.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\NovaPoshta.BusinessLogic.pdb
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\NovaPoshta.BusinessLogic.dll.config
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\EntityFramework.xml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.csproj.CopyComplete

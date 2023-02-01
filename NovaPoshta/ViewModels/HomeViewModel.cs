@@ -1,6 +1,7 @@
 ﻿using NovaPoshta.Infrastrcture;
 using NovaPoshta.Infrastructure;
 using NovaPoshta.Views.Employees;
+using NovaPoshta.Views.Poshtomats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,8 @@ namespace NovaPoshta.ViewModels
         }
         public HomeViewModel() {
             HomeSwitcher.ContentArea = this;
-            HomeSwitcher.Switch(new EmployeesListView());
+            
+            HomeSwitcher.Switch(new AddPoshtomatView());
         }
 
         public void Navigate(UserControl page)
