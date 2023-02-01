@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NovaPoshta.BusinessLogic.Repositories
 {
-    public class PochtomatRepository:GenericRepository<Poshtomat>
+    public class PoshtomatRepository:GenericRepository<Poshtomat>
     {
     }
 }

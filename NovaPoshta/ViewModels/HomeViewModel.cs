@@ -29,7 +29,7 @@ namespace NovaPoshta.ViewModels
         public HomeViewModel() {
             HomeSwitcher.ContentArea = this;
             
-            HomeSwitcher.Switch(new AddPoshtomatView());
+            HomeSwitcher.Switch(new PoshtomatsListView());
         }
 
         public void Navigate(UserControl page)

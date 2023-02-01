@@ -53,3 +53,5 @@ C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\NovaPoshta.BusinessLogic.pdb
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\NovaPoshta.BusinessLogic.dll.config
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\EntityFramework.xml
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.csproj.CopyComplete
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\EntityFramework.SqlServer.dll
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\bin\Debug\EntityFramework.SqlServer.xml

@@ -13,7 +13,7 @@ namespace NovaPoshta.BusinessLogic.Context
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Poshtomat> Poshtomats { get; set; }
         public NovaPoshtaContext():
-            base("name=")
+            base("NovaPoshta")
         {
 
         }

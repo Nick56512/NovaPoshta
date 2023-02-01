@@ -13,5 +13,7 @@ namespace NovaPoshta.BusinessLogic.Repositories
         T Update(T entity);
         T Get(Guid id);
         IQueryable<T> GetAll();
+
+        void SaveChangesAsync();
     }
 }

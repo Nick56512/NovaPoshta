@@ -60,7 +60,7 @@
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\NotificationRepository.cs" />
-    <Compile Include="Repositories\PochtomatRepository.cs" />
+    <Compile Include="Repositories\PoshtomatRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

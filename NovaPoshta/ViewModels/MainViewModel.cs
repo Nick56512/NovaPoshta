@@ -28,7 +28,7 @@ namespace NovaPoshta.ViewModels
         public MainViewModel()
         {
             Switcher.ContentArea = this;
-            Switcher.Switch(new LoginView());
+            Switcher.Switch(new HomeView());
         }
 
         public void Navigate(UserControl page)
