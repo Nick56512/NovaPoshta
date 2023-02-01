@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace NovaPoshta.Views.Poshtomats
 {
     /// <summary>
-    /// Interaction logic for PoshtomatsListView.xaml
+    /// Логика взаимодействия для EditPoshtomatView.xaml
     /// </summary>
-    public partial class PoshtomatsListView : UserControl
+    public partial class EditPoshtomatView : UserControl
     {
-        public PoshtomatsListView()
+        public EditPoshtomatView()
         {
             InitializeComponent();
-        }
-
-        private void DataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
-        {
-            e.Row.Header=(e.Row.GetIndex()+1).ToString();
         }
     }
 }

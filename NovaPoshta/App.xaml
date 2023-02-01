@@ -158,7 +158,7 @@
             <Setter Property="CanUserAddRows" Value="False"></Setter>
             <Setter Property="IsReadOnly" Value="True"></Setter>
             <Setter Property="BorderThickness" Value="0"></Setter>
-            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
             <Setter Property="FontFamily" Value="Commissioner"></Setter>
             <Setter Property="RowHeaderWidth" Value="0"></Setter>
             <Setter Property="HeadersVisibility" Value="Column"></Setter>
@@ -168,18 +168,52 @@
         <Style x:Key="Row" TargetType="DataGridRow">
             <Setter Property="Background" Value="WhiteSmoke"></Setter>
             <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
             <Setter Property="MinHeight" Value="70"></Setter>
-         
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF392E"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+            </Style.Triggers>
+
         </Style>
         <Style x:Key="ColumnHeader" TargetType="DataGridColumnHeader">
             <Setter Property="BorderThickness" Value="0,0,0,2"></Setter>
             <Setter Property="BorderBrush" Value="Red"></Setter>
             <Setter Property="Padding" Value="20"></Setter>
             <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridColumnHeader">
+           
+                       <Border BorderBrush="Red" BorderThickness="0,0,0,2" Padding="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Border>
+                       
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
         </Style>
+
         <Style x:Key="Cell" TargetType="DataGridCell">
             <Setter Property="BorderThickness" Value="0"></Setter>
-            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#FF392E"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
 

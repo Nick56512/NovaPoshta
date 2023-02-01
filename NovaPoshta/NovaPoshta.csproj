@@ -68,12 +68,16 @@
     <Compile Include="Model\AuthenticationService.cs" />
     <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
     <Compile Include="ViewModels\AddPoshtomatViewModel.cs" />
+    <Compile Include="ViewModels\EditPoshtomatViewModel.cs" />
     <Compile Include="ViewModels\PoshtomatsListViewModel.cs" />
     <Compile Include="Views\Employees\AddEmployeeView.xaml.cs">
       <DependentUpon>AddEmployeeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Poshtomats\AddPoshtomatView.xaml.cs">
       <DependentUpon>AddPoshtomatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Poshtomats\EditPoshtomatView.xaml.cs">
+      <DependentUpon>EditPoshtomatView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Poshtomats\PoshtomatsListView.xaml.cs">
       <DependentUpon>PoshtomatsListView.xaml</DependentUpon>
@@ -124,6 +128,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Poshtomats\AddPoshtomatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Poshtomats\EditPoshtomatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

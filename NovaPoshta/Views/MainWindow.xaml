@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:NovaPoshta"
         mc:Ignorable="d"
         xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
-        Title="Нова пошта" Height="700" Width="950" MinWidth="950" MinHeight="700">
+        Title="Нова пошта" Height="600" Width="950" MinWidth="950" MinHeight="600">
     <Window.DataContext>
         <vm:MainViewModel></vm:MainViewModel>
     </Window.DataContext>

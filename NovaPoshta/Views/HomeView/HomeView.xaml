@@ -18,7 +18,7 @@
         
         <StackPanel Orientation="Vertical">
             <Image Grid.Column="0" Width="170" Source="/Resources/icons/image 1.png" HorizontalAlignment="Left" Margin="15"></Image>
-            <Button Margin="0,60,0,0" Style="{StaticResource MenuItem}">
+            <Button Margin="0,60,0,0" Style="{StaticResource MenuItem}" Command="{Binding EmployeesListCommand}">
                 <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
                     <Image Source="/Resources/icons/courier (1).png" Width="60" HorizontalAlignment="Left" Margin="10"></Image>
                     <TextBlock Style="{StaticResource ButtonLabel}" FontSize="19" Padding="20">
@@ -26,7 +26,7 @@
                     </TextBlock>
                 </DockPanel>
             </Button>
-            <Button Margin="0,20,0,0" Style="{StaticResource MenuItem}">
+            <Button Margin="0,20,0,0" Style="{StaticResource MenuItem}" Command="{Binding PoshtomatsListCommand}">
                 <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
                     <Image Source="/Resources/icons/location-pin.png" Width="60" HorizontalAlignment="Left" Margin="10"></Image>
                     <TextBlock Style="{StaticResource ButtonLabel}" FontSize="19" Padding="20">
@@ -43,7 +43,7 @@
                 </DockPanel>
             </Button>
         </StackPanel>
-        <Button Style="{StaticResource MenuItem}" VerticalAlignment="Bottom">
+        <Button Style="{StaticResource MenuItem}" VerticalAlignment="Bottom" Command="{Binding ExitCommand}" Cursor="Hand">
             <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
                 <Image Source="/Resources/icons/exit1.png" Width="50" HorizontalAlignment="Left" Margin="10"></Image>
                 <TextBlock Style="{StaticResource ButtonLabel}" Padding="20">

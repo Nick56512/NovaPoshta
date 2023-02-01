@@ -39,15 +39,23 @@ namespace NovaPoshta.BusinessLogic.Repositories
             return table;
         }
 
-        public async void SaveChangesAsync()
+        public void SaveChanges()
         {
-            await context.SaveChangesAsync();
+            context.SaveChanges();
         }
 
         public T Update(T entity)
         {
             table.AddOrUpdate(entity);
             return entity;
+        }
+
+        public Task SaveChangesAsync()
+        {
+            return Task.Run(() =>
+            {
+                SaveChanges();
+            });
         }
     }
 }

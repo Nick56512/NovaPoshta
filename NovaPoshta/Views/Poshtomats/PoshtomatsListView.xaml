@@ -54,10 +54,20 @@
             </Button>
 
         </StackPanel>
-        <Button Style="{StaticResource LightRedButton}"  Grid.Column="0" Grid.Row="2" Width="140" Height="30">Сортування</Button>
-        <Button Style="{StaticResource LightRedButton}" Grid.Column="1" Grid.Row="2" Width="140" Height="30">Додати</Button>
-        <Button Style="{StaticResource LightRedButton}" Grid.Column="2" Grid.Row="2" Width="140" Height="30">Редагувати</Button>
-        <Button Style="{StaticResource LightRedButton}" Width="140" Grid.Column="3" Grid.Row="2" Height="30">Видалити</Button>
+        <ComboBox Grid.Column="0" Grid.Row="2" Width="140" Height="30" Text="Сортування">
+            <ComboBoxItem Name="Item1">За номером</ComboBoxItem>
+            <ComboBoxItem Name="Item2">За адресою</ComboBoxItem>
+            <ComboBoxItem Name="Item3">За заповненням</ComboBoxItem>
+          
+        </ComboBox>
+        <!--
+        <Button Style="{StaticResource LightRedButton}"  Grid.Column="0" Grid.Row="2" Width="140" Height="30">
+            
+            
+        </Button>-->
+        <Button Style="{StaticResource LightRedButton}" Command="{Binding AddPoshtomatCommand}" Grid.Column="1" Grid.Row="2" Width="140" Height="30">Додати</Button>
+        <Button Style="{StaticResource LightRedButton}" Command="{Binding UpdatePoshtomatCommand}" Grid.Column="2" Grid.Row="2" Width="140" Height="30">Редагувати</Button>
+        <Button Style="{StaticResource LightRedButton}" Command="{Binding RemovePoshtomatCommand}" Width="140" Grid.Column="3" Grid.Row="2" Height="30">Видалити</Button>
         <DataGrid 
             Grid.Column="0" 
             Grid.Row="3"
@@ -67,7 +77,8 @@
             RowStyle="{StaticResource Row}"
             ItemsSource="{Binding Poshtomats}"
             SelectedItem="{Binding SelectedPoshtomat}"
-            CellStyle="{StaticResource Cell}">
+            CellStyle="{StaticResource Cell}"
+            LoadingRow="DataGrid_LoadingRow">
 
 
 
@@ -76,9 +87,8 @@
             <DataGrid.Columns>
 
                 <DataGridTextColumn Header="№"
-                                   
                                 
-                                    
+                               
                                     />
                 <DataGridTextColumn Header="Поштомат"
                                     Binding="{Binding Number}"
@@ -90,7 +100,7 @@
                                     >
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Заповнений на"
-                                    Binding="{Binding MaxQuantity}">
+                                    Binding="{Binding QuantityToString}">
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>

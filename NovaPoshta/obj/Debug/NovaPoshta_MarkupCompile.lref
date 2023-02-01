@@ -1,10 +1,11 @@
-﻿C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\GeneratedInternalTypeHelper.g.cs
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\App.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\Employees\AddEmployeeView.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\Employees\EmployeesListView.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\HomeView\HomeView.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\Login\LoginView.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\MainWindow.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\Poshtomats\AddPoshtomatView.xaml;;
-FC:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\Views\Poshtomats\PoshtomatsListView.xaml;;
+﻿
+FC:\Repo\NovaPoshta\NovaPoshta\App.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\Employees\AddEmployeeView.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\Employees\EmployeesListView.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\HomeView\HomeView.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\Login\LoginView.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\MainWindow.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\Poshtomats\AddPoshtomatView.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\Poshtomats\EditPoshtomatView.xaml;;
+FC:\Repo\NovaPoshta\NovaPoshta\Views\Poshtomats\PoshtomatsListView.xaml;;
 
