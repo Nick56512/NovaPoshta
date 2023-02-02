@@ -34,7 +34,7 @@
                     </TextBlock>
                 </DockPanel>
             </Button>
-            <Button Margin="0,20,0,0" Style="{StaticResource MenuItem}">
+            <Button Margin="0,20,0,0" Style="{StaticResource MenuItem}" Command="{Binding NotificationsListCommand}">
                 <DockPanel Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}},Mode=TwoWay}">
                     <Image Source="/Resources/icons/notification.png" Width="60" HorizontalAlignment="Left" Margin="10"></Image>
                     <TextBlock Style="{StaticResource ButtonLabel}" FontSize="19" Padding="20">

@@ -30,7 +30,7 @@
 
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                         <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
-                        <TextBlock Style="{StaticResource Paragraph}" Margin="5">Прізвище Ім'я</TextBlock>
+                        <TextBlock Style="{StaticResource Paragraph}" Margin="5">Олександр Олександрович</TextBlock>
                     </StackPanel>
                 </DockPanel>
 

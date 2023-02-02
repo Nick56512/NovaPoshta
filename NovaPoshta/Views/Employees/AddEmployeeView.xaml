@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="590"></RowDefinition>
+            <RowDefinition Height="600"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Border Style="{StaticResource WhiteBorder}" Grid.Column="1" Grid.Row="1">
