@@ -40,24 +40,27 @@
 
 
         </Border>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="4">
+   
             <TextBox Style="{StaticResource TextBoxDefaultStyle}" 
-                 Height="30"
-                     Width="570"
-                 VerticalAlignment="Top" Margin="10,0,0,0"></TextBox>
+                     Grid.ColumnSpan="4"
+                     Grid.Row="1"
+                     Height="30"
+                     VerticalAlignment="Top" Margin="30,0,125,0"></TextBox>
 
-            <Button Style="{StaticResource LightRedButton}"
+        <Button Style="{StaticResource LightRedButton}"
                      VerticalAlignment="Top"
                      Width="50"
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalAlignment="Center"
                      >
-                <Image Source="/Resources/icons/search.png" Width="30"></Image>
-            </Button>
-
-        </StackPanel>
-        <ComboBox Grid.Column="0" Grid.Row="2" Width="140" Height="30" Text="Сортування">
-            <ComboBoxItem Name="Item1">За номером</ComboBoxItem>
-            <ComboBoxItem Name="Item2">За адресою</ComboBoxItem>
-            <ComboBoxItem Name="Item3">За заповненням</ComboBoxItem>
+            <Image Source="/Resources/icons/search.png" Width="30"></Image>
+        </Button>
+        <ComboBox Grid.Column="0" Grid.Row="2" Width="140" Height="30" Text="Сортування" IsEditable="True" IsReadOnly="True"
+                  Style="{StaticResource LightComboBox}">
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item1">За номером</ComboBoxItem>
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item2">За адресою</ComboBoxItem>
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item3">За заповненням</ComboBoxItem>
           
         </ComboBox>
         <!--

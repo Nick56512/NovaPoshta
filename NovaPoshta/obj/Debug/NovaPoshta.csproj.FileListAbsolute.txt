@@ -98,3 +98,4 @@ C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Notifications\Notificati
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\EditPoshtomatView.g.cs
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Notifications\NotificationsListView.baml
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\EditPoshtomatView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.csproj.SuggestedBindingRedirects.cache
