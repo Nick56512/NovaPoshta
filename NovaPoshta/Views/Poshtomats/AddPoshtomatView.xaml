@@ -7,9 +7,16 @@
              xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+ 
     <UserControl.DataContext>
         <vm:AddPoshtomatViewModel></vm:AddPoshtomatViewModel>
     </UserControl.DataContext>
+    <UserControl.InputBindings>
+        <KeyBinding 
+                Key="E" 
+                Command="{Binding BackCommand}"
+            Modifiers="Control"/>
+    </UserControl.InputBindings>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>

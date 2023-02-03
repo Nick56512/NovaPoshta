@@ -10,6 +10,13 @@
     <UserControl.DataContext>
         <vm:PoshtomatsListViewModel></vm:PoshtomatsListViewModel>
     </UserControl.DataContext>
+    <UserControl.InputBindings>
+        <KeyBinding
+            Command="{Binding SearchPoshtomatCommand}"
+            Key="Return">
+            
+        </KeyBinding>
+    </UserControl.InputBindings>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"></ColumnDefinition>
@@ -45,7 +52,8 @@
                      Grid.ColumnSpan="4"
                      Grid.Row="1"
                      Height="30"
-                     VerticalAlignment="Top" Margin="30,0,125,0"></TextBox>
+                     VerticalAlignment="Top" Margin="30,0,125,0"
+                     Text="{Binding SearchString}"></TextBox>
 
         <Button Style="{StaticResource LightRedButton}"
                      VerticalAlignment="Top"
@@ -53,11 +61,12 @@
                 Grid.Row="1"
                 Grid.Column="3"
                 HorizontalAlignment="Center"
+                Command="{Binding SearchPoshtomatCommand}"
                      >
             <Image Source="/Resources/icons/search.png" Width="30"></Image>
         </Button>
         <ComboBox Grid.Column="0" Grid.Row="2" Width="140" Height="30" Text="Сортування" IsEditable="True" IsReadOnly="True"
-                  Style="{StaticResource LightComboBox}">
+                  Style="{StaticResource LightComboBox}" SelectedIndex="{Binding SortType}">
             <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item1">За номером</ComboBoxItem>
             <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item2">За адресою</ComboBoxItem>
             <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item3">За заповненням</ComboBoxItem>

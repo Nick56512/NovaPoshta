@@ -13,6 +13,12 @@ using System.Windows.Input;
 
 namespace NovaPoshta.ViewModels
 {
+    public enum SortType
+    {
+        ByNumber,
+        ByAddress,
+        ByCapacity
+    }
     public class PoshtomatsListViewModel:BaseNotifyOfPropertyChanged
     {
         IRepository<Poshtomat> poshtomatRepository;
@@ -35,11 +41,24 @@ namespace NovaPoshta.ViewModels
         public ICommand AddPoshtomatCommand { get; set; }
         public ICommand RemovePoshtomatCommand { get; set; }
         public ICommand UpdatePoshtomatCommand { get; set; }
+        public ICommand SearchPoshtomatCommand { get; set; }
+        public string SearchString { get; set; }
         public PoshtomatsListViewModel()
         {
             poshtomatRepository=new PoshtomatRepository();
             Poshtomats=new ObservableCollection<Poshtomat>(poshtomatRepository.GetAll());
             InitCommand();
+        }
+        SortType sortType;
+        public SortType SortType
+        {
+            get => sortType;
+            set
+            {
+                sortType = value;
+                SortPoshtomats();
+                NotifyPropertyChanged();
+            }
         }
 
         private void InitCommand()
@@ -73,6 +92,30 @@ namespace NovaPoshta.ViewModels
                 
             
             });
+            SearchPoshtomatCommand = new RelayCommand((obj) =>
+            {
+                if (!string.IsNullOrEmpty(SearchString))
+                {
+                    Poshtomats = new ObservableCollection<Poshtomat>(Poshtomats
+                        .Where(x => x.Number.ToLower().Contains(SearchString.ToLower())));
+                }
+                else Poshtomats=new ObservableCollection<Poshtomat>(poshtomatRepository.GetAll());
+            });
+        }
+        private void SortPoshtomats()
+        {
+            switch (SortType)
+            {
+                case SortType.ByNumber:
+                    Poshtomats = new ObservableCollection<Poshtomat>(Poshtomats.OrderBy(x => x.Number));
+                    break;
+                case SortType.ByAddress:
+                    Poshtomats = new ObservableCollection<Poshtomat>(Poshtomats.OrderBy(x => x.Address));
+                    break;
+                case SortType.ByCapacity:
+                    Poshtomats = new ObservableCollection<Poshtomat>(Poshtomats.OrderBy(x => x.MaxQuantity-x.CurrentQuantity));
+                    break;
+            }
         }
     }
 }

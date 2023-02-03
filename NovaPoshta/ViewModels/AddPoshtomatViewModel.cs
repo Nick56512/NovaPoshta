@@ -18,6 +18,7 @@ namespace NovaPoshta.ViewModels
         IRepository<Poshtomat> poshtomatRepository;
         public Poshtomat NewPoshtomat { get; set; }
         public ICommand AddNewPoshtomatCommand { get; set; }
+        public ICommand BackCommand { get; set; }
         
         public AddPoshtomatViewModel()
         {
@@ -29,6 +30,11 @@ namespace NovaPoshta.ViewModels
                 poshtomatRepository.Create(NewPoshtomat);
                 await poshtomatRepository.SaveChangesAsync();
 
+                Switcher.Switch(new HomeView());
+                HomeSwitcher.Switch(new PoshtomatsListView());
+            });
+            BackCommand = new RelayCommand((obj) =>
+            {
                 Switcher.Switch(new HomeView());
                 HomeSwitcher.Switch(new PoshtomatsListView());
             });
