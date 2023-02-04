@@ -1,7 +1,10 @@
 ﻿using NovaPoshta.BusinessLogic.Context;
+using NovaPoshta.Infrastrcture;
 using NovaPoshta.Infrastructure;
 using NovaPoshta.Model;
+using NovaPoshta.Views.Employees;
 using NovaPoshta.Views.HomeView;
+using NovaPoshta.Views.Login;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +18,19 @@ namespace NovaPoshta.ViewModels
     public class LoginViewModel:BaseNotifyOfPropertyChanged
     {
         public string Login { get; set; }
-        public string Password { get; set; }
         public ICommand LoginCommand { get; set; }
         public LoginViewModel() {
         
-            LoginCommand = new RelayCommand((obj) =>
+            LoginCommand = new RelayCommand(async (obj) =>
             {
-                Employee employee= AuthenticationService.Login(Login, Password);
+                MainViewModel model= (Switcher.ContentArea as MainViewModel);
+                IHavePassword pass=(model.CurrentView as IHavePassword);
+                string password = pass.GetPassword();
+                Employee employee= await AuthenticationService.LoginAsync(Login, password);
                 if(employee != null)
                 {
                     Switcher.Switch(new HomeView());
+                    HomeSwitcher.Switch(new EmployeesListView());
                 }
             });
         }

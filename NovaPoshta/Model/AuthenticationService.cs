@@ -10,17 +10,25 @@ namespace NovaPoshta.Model
 {
     public class AuthenticationService
     {
-        static IRepository<Employee> repository { get; set; }
+        static IRepository<Employee> repository { get; set; }=new EmployeeRepository();
         public static Employee CurrentUser { get; set; }
-        public AuthenticationService() { 
-            repository=new EmployeeRepository();
-        }
+      
         public static Employee Login(string login,string password)
         {
             CurrentUser=repository
                 .GetAll()
                 .FirstOrDefault(x => x.Login==login&&x.Password==password);
             return CurrentUser;
+        }
+        public static Task<Employee> LoginAsync(string login, string password)
+        {
+            return Task.Run(() =>
+            {
+                CurrentUser = repository
+              .GetAll()
+              .FirstOrDefault(x => x.Login == login && x.Password == password);
+                return CurrentUser;
+            });
         }
         public static string RandomString(int size, bool lowerCase)
         {

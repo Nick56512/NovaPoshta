@@ -1,6 +1,7 @@
 ﻿using NovaPoshta.BusinessLogic.Context;
 using NovaPoshta.BusinessLogic.Repositories;
 using NovaPoshta.Infrastructure;
+using NovaPoshta.Model;
 using NovaPoshta.Views.Employees;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace NovaPoshta.ViewModels
         public ICommand UpdateEmployeeCommand { get; set; }
         public ICommand SearchEmployeeCommand { get; set; }
         public string SearchString { get; set; }
+        public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser.Name} {AuthenticationService.CurrentUser.LastName}";
 
         ObservableCollection<Employee> employees;
         public ObservableCollection<Employee> Employees

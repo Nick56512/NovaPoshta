@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NovaPoshta.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,16 @@ namespace NovaPoshta.Views.Login
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class LoginView : UserControl,IHavePassword
     { 
         public LoginView()
         {
             InitializeComponent();
+        }
+
+        public string GetPassword()
+        {
+            return PasswordBox.Password;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using NovaPoshta.BusinessLogic.Context;
 using NovaPoshta.BusinessLogic.Repositories;
 using NovaPoshta.Infrastructure;
+using NovaPoshta.Model;
 using NovaPoshta.Views.Poshtomats;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,7 @@ namespace NovaPoshta.ViewModels
         public ICommand UpdatePoshtomatCommand { get; set; }
         public ICommand SearchPoshtomatCommand { get; set; }
         public string SearchString { get; set; }
+        public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser.Name} {AuthenticationService.CurrentUser.LastName}";
         public PoshtomatsListViewModel()
         {
             poshtomatRepository=new PoshtomatRepository();

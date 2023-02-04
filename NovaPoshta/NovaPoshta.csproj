@@ -66,6 +66,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\AuthenticationService.cs" />
+    <Compile Include="Model\IHavePassword.cs" />
     <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
     <Compile Include="ViewModels\AddPoshtomatViewModel.cs" />
     <Compile Include="ViewModels\EditPoshtomatViewModel.cs" />

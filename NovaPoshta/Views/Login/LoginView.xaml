@@ -7,6 +7,9 @@
               xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:LoginViewModel></vm:LoginViewModel>
+    </UserControl.DataContext>
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -27,7 +30,7 @@
                 <StackPanel Margin="0,15,0,0">
                     <TextBlock Text="Логін" Style="{StaticResource TextBoxLabel}"></TextBlock>
                     <Border Style="{StaticResource TextBoxBorder}">
-                        <TextBox Style="{StaticResource TextBoxDefaultStyle}"/>
+                        <TextBox Style="{StaticResource TextBoxDefaultStyle}" Text="{Binding Login}"/>
                     </Border>
                 </StackPanel>
                 <StackPanel Margin="0,35,0,0">
@@ -39,7 +42,8 @@
 
                 </StackPanel>
                
-                    <Button Width="120" Height="40" Style="{StaticResource DarkRedButton}" Margin="20">
+                    <Button Width="120" Height="40" Style="{StaticResource DarkRedButton}" Margin="20"
+                            Command="{Binding LoginCommand}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource ButtonLabel}" Margin="0,0,20,0">Вхід</TextBlock>
                             <Image Source="/Resources/icons/exit1.png" Width="30"></Image>

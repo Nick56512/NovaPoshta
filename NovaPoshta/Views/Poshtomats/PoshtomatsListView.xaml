@@ -39,7 +39,7 @@
 
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                         <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
-                        <TextBlock Style="{StaticResource Paragraph}" Margin="5">Олександр Олександрович</TextBlock>
+                        <TextBlock Style="{StaticResource Paragraph}" Margin="5" Text="{Binding LoggedUser}"></TextBlock>
                     </StackPanel>
                 </DockPanel>
 
