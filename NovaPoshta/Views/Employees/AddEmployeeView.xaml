@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="600"></RowDefinition>
+            <RowDefinition Height="580"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Border Style="{StaticResource WhiteBorder}" Grid.Column="1" Grid.Row="1">
@@ -38,35 +38,39 @@
                         <TextBox Style="{StaticResource TextBoxDefaultStyle}" Text="{Binding NewEmployee.LastName}"/>
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="0,10,0,0">
+                <StackPanel Margin="0,5,0,0">
                     <TextBlock Text="Ім'я" Style="{StaticResource TextBoxLabel}"></TextBlock>
                     <Border Style="{StaticResource TextBoxBorder}">
                         <TextBox Style="{StaticResource TextBoxDefaultStyle}" Text="{Binding NewEmployee.Name}"/>
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="0,10,0,0">
+                <StackPanel Margin="0,5,0,0">
                     <TextBlock Text="По-батькові" Style="{StaticResource TextBoxLabel}"></TextBlock>
                     <Border Style="{StaticResource TextBoxBorder}">
                         <TextBox Style="{StaticResource TextBoxDefaultStyle}" Text="{Binding NewEmployee.Patronymic}"/>
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="0,10,0,0">
+                <StackPanel Margin="0,5,0,0">
                     <TextBlock Text="Дата народження" Style="{StaticResource TextBoxLabel}"></TextBlock>
                     <Border Style="{StaticResource TextBoxBorder}">
                         <TextBox Style="{StaticResource TextBoxDefaultStyle}" Text="{Binding Path=NewEmployee.DateOfBirth, StringFormat=dd.MM.yyyy}"/>
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="0,10,0,0">
+                <StackPanel Margin="0,5,0,0">
                     <TextBlock Text="Телефон" Style="{StaticResource TextBoxLabel}"></TextBlock>
                     <Border Style="{StaticResource TextBoxBorder}">
                         <TextBox Style="{StaticResource TextBoxDefaultStyle}" Text="{Binding NewEmployee.PhoneNumber}"/>
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="0,10,0,0">
+                <StackPanel Margin="0,5,0,0">
                     <TextBlock Text="Поштомат" Style="{StaticResource TextBoxLabel}"></TextBlock>
-                    <Border Style="{StaticResource TextBoxBorder}">
-                        <TextBox Style="{StaticResource TextBoxDefaultStyle}"/>
-                    </Border>
+                    <ComboBox Text="Оберіть поштомат" IsEditable="True" IsReadOnly="True"
+                     Style="{StaticResource DarkComboBox}"
+                     SelectedItem="{Binding SelectedPoshtomat}"
+                     ItemsSource="{Binding Poshtomats}"
+                     ItemContainerStyle="{StaticResource DarkComboBoxItem}">
+                    
+                    </ComboBox>
                 </StackPanel>
 
                 <Button Width="120" Height="40" Margin="0,15,0,0" Style="{StaticResource DarkRedButton}"

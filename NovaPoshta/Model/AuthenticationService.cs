@@ -10,18 +10,40 @@ namespace NovaPoshta.Model
 {
     public class AuthenticationService
     {
-        IRepository<Employee> repository { get; set; }
+        static IRepository<Employee> repository { get; set; }
         public static Employee CurrentUser { get; set; }
         public AuthenticationService() { 
             repository=new EmployeeRepository();
         }
-        public Employee Login(string login,string password)
+        public static Employee Login(string login,string password)
         {
             CurrentUser=repository
                 .GetAll()
                 .FirstOrDefault(x => x.Login==login&&x.Password==password);
             return CurrentUser;
         }
-
+        public static string RandomString(int size, bool lowerCase)
+        {
+            StringBuilder builder = new StringBuilder();
+            Random random = new Random();
+            char ch;
+            for (int i = 0; i < size; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            if (lowerCase)
+                return builder.ToString().ToLower();
+            return builder.ToString();
+        }
+        public static string RandomPassword(int size = 0)
+        {
+            Random random= new Random();
+            StringBuilder builder = new StringBuilder();
+            builder.Append(RandomString(4, true));
+            builder.Append(random.Next(1000, 9999));
+            builder.Append(RandomString(2, false));
+            return builder.ToString();
+        }
     }
 }

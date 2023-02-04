@@ -54,7 +54,7 @@ namespace NovaPoshta.ViewModels
         {
             _employeesRepository = new EmployeeRepository();
             UploadEmployees();
-
+            InitCommands();
         }
 
 

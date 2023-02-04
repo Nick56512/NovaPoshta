@@ -16,13 +16,12 @@ namespace NovaPoshta.ViewModels
     {
         public string Login { get; set; }
         public string Password { get; set; }
-        AuthenticationService authenticationService;
         public ICommand LoginCommand { get; set; }
         public LoginViewModel() {
-            authenticationService= new AuthenticationService();
+        
             LoginCommand = new RelayCommand((obj) =>
             {
-                Employee employee= authenticationService.Login(Login, Password);
+                Employee employee= AuthenticationService.Login(Login, Password);
                 if(employee != null)
                 {
                     Switcher.Switch(new HomeView());

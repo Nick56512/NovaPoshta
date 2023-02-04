@@ -1,6 +1,9 @@
 ﻿using NovaPoshta.BusinessLogic.Context;
 using NovaPoshta.BusinessLogic.Repositories;
+using NovaPoshta.Infrastrcture;
 using NovaPoshta.Infrastructure;
+using NovaPoshta.Model;
+using NovaPoshta.Views.Employees;
 using NovaPoshta.Views.HomeView;
 using System;
 using System.Collections.Generic;
@@ -24,14 +27,13 @@ namespace NovaPoshta.ViewModels
             {
                 return poshtomats;
             }
-
             set
             {
                 poshtomats= value;
                 NotifyPropertyChanged();
             } 
-        
         }
+        public Poshtomat SelectedPoshtomat { get; set; }
         public Guid PoshtomatId { get; set; }
         public Employee NewEmployee { get; set; }
         public ICommand AddNewEmployeeCommand { get; set; }
@@ -40,12 +42,23 @@ namespace NovaPoshta.ViewModels
             employeeRepository = new EmployeeRepository();
             poshtomatRepository = new PoshtomatRepository();
             NewEmployee = new Employee();
-            AddNewEmployeeCommand = new RelayCommand((obj) =>
+            UploadPoshtomats();
+            AddNewEmployeeCommand = new RelayCommand(async (obj) =>
             {
+                NewEmployee.Id=Guid.NewGuid();
+                NewEmployee.PoshtomatId=SelectedPoshtomat.Id;
+                NewEmployee.Login = AuthenticationService.RandomString(6,false);
+                NewEmployee.Password = AuthenticationService.RandomPassword();
                 employeeRepository.Create(NewEmployee);
-                employeeRepository.SaveChangesAsync();
+                await employeeRepository.SaveChangesAsync();
                 Switcher.Switch(new HomeView());
-            });
+                HomeSwitcher.Switch(new EmployeesListView());
+
+            },(obj)=>SelectedPoshtomat!=null);
+        }
+        private async void UploadPoshtomats()
+        {
+            Poshtomats=new ObservableCollection<Poshtomat>(await poshtomatRepository.GetAllAsync());
         }
     }
 }

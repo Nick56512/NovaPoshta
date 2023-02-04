@@ -23,5 +23,9 @@ namespace NovaPoshta.BusinessLogic.Context
                 return $"{MaxQuantity}/{CurrentQuantity}";
             }
         }
+        public override string ToString()
+        {
+            return Number;
+        }
     }
 }
