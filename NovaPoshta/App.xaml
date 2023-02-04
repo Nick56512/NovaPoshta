@@ -152,7 +152,8 @@
             <Setter Property="CanUserResizeRows" Value="False"></Setter>
             <Setter Property="CanUserSortColumns" Value="False"></Setter>
             <Setter Property="CanUserResizeColumns" Value="False"></Setter>
-            <Setter Property="ColumnWidth" Value="*"></Setter>
+          
+    
             <Setter Property="Margin" Value="10"></Setter>
             <Setter Property="CanUserDeleteRows" Value="False"></Setter>
             <Setter Property="CanUserAddRows" Value="False"></Setter>

@@ -30,7 +30,7 @@ namespace NovaPoshta.ViewModels
         public ICommand UpdateEmployeeCommand { get; set; }
         public ICommand SearchEmployeeCommand { get; set; }
         public string SearchString { get; set; }
-       // public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser?.Name} {AuthenticationService.CurrentUser?.LastName}";
+        public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser?.Name} {AuthenticationService.CurrentUser?.LastName}";
 
         ObservableCollection<Employee> employees;
         public ObservableCollection<Employee> Employees
@@ -84,6 +84,11 @@ namespace NovaPoshta.ViewModels
                 Switcher.Switch(updatingView);
 
             }, (obj) => SelectedEmployee != null);
+
+            SearchEmployeeCommand = new RelayCommand((obj) =>
+            {
+                SearchEmployees();
+            });
         }
         private async void UploadEmployees()
         {
@@ -91,7 +96,31 @@ namespace NovaPoshta.ViewModels
         }
         private void SortEmployees()
         {
-
+            switch (SortType)
+            {
+                case SortEmployeeType.ByFullName:
+                    Employees = new ObservableCollection<Employee>(Employees.OrderBy(x => x.FullName));
+                    break;
+                case SortEmployeeType.ByDateOfBirth:
+                    Employees = new ObservableCollection<Employee>(Employees.OrderBy(x => x.DateOfBirth));
+                    break;
+                case SortEmployeeType.ByNumberPhone:
+                    Employees = new ObservableCollection<Employee>(Employees.OrderBy(x => x.PhoneNumber));
+                    break;
+                case SortEmployeeType.ByPoshtomat:
+                    Employees = new ObservableCollection<Employee>(Employees.OrderBy(x => x.Poshtomat.Number));
+                    break;
+            }
+        }
+        private async void SearchEmployees()
+        {
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                Employees = new ObservableCollection<Employee>(
+                    (await _employeesRepository.GetAllAsync())
+                    .Where(x =>x.LastName.ToLower().Contains(SearchString.ToLower())) ) ;
+            }
+            else Employees =new ObservableCollection<Employee>(await _employeesRepository.GetAllAsync());
         }
     }
 }

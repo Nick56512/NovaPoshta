@@ -44,7 +44,7 @@ namespace NovaPoshta.ViewModels
         public ICommand UpdatePoshtomatCommand { get; set; }
         public ICommand SearchPoshtomatCommand { get; set; }
         public string SearchString { get; set; }
-       // public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser?.Name} {AuthenticationService.CurrentUser?.LastName}";
+        public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser?.Name} {AuthenticationService.CurrentUser?.LastName}";
         public PoshtomatsListViewModel()
         {
             poshtomatRepository=new PoshtomatRepository();
