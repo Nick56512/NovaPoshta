@@ -1,5 +1,6 @@
 ﻿using NovaPoshta.Infrastrcture;
 using NovaPoshta.Infrastructure;
+using NovaPoshta.Model;
 using NovaPoshta.Views.Employees;
 using NovaPoshta.Views.Login;
 using NovaPoshta.Views.Notifications;
@@ -48,6 +49,7 @@ namespace NovaPoshta.ViewModels
             });
             ExitCommand = new RelayCommand((obj) =>
             {
+                AuthenticationService.CurrentUser = new BusinessLogic.Context.Employee();
                 Switcher.Switch(new LoginView());
             });
             NotificationsListCommand = new RelayCommand((obj) =>

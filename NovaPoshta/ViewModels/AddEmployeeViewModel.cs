@@ -34,7 +34,6 @@ namespace NovaPoshta.ViewModels
             } 
         }
         public Poshtomat SelectedPoshtomat { get; set; }
-        public Guid PoshtomatId { get; set; }
         public Employee NewEmployee { get; set; }
         public ICommand AddNewEmployeeCommand { get; set; }
         public AddEmployeeViewModel()

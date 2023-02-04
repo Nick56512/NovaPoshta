@@ -67,7 +67,7 @@
             <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item4">За номером поштомата</ComboBoxItem>
         </ComboBox>
         <Button Style="{StaticResource LightRedButton}" Command="{Binding AddEmployeeCommand}" Grid.Column="1" Grid.Row="2" Width="140" Height="30">Додати</Button>
-        <Button Style="{StaticResource LightRedButton}" Grid.Column="2" Grid.Row="2" Width="140" Height="30">Редагувати</Button>
+        <Button Style="{StaticResource LightRedButton}" Command="{Binding UpdateEmployeeCommand}" Grid.Column="2" Grid.Row="2" Width="140" Height="30">Редагувати</Button>
         <Button Style="{StaticResource LightRedButton}" Command="{Binding RemoveEmployeeCommand}" Width="140" Grid.Column="3" Grid.Row="2" Height="30">Видалити</Button>
         <DataGrid 
             Grid.Column="0" 
@@ -76,7 +76,9 @@
             Style="{StaticResource Grid}"
             ColumnHeaderStyle="{StaticResource ColumnHeader}"
             RowStyle="{StaticResource Row}"
-            ItemsSource="{Binding Employees}">
+            ItemsSource="{Binding Employees}"
+            SelectedItem="{Binding SelectedEmployee}"
+            CellStyle="{StaticResource Cell}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ПІБ"
                                     Binding="{Binding FullName}"

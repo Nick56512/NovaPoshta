@@ -69,11 +69,15 @@
     <Compile Include="Model\IHavePassword.cs" />
     <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
     <Compile Include="ViewModels\AddPoshtomatViewModel.cs" />
+    <Compile Include="ViewModels\EditEmployeeViewModel.cs" />
     <Compile Include="ViewModels\EditPoshtomatViewModel.cs" />
     <Compile Include="ViewModels\EmployeesListViewModel.cs" />
     <Compile Include="ViewModels\PoshtomatsListViewModel.cs" />
     <Compile Include="Views\Employees\AddEmployeeView.xaml.cs">
       <DependentUpon>AddEmployeeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employees\EditEmployeeView.xaml.cs">
+      <DependentUpon>EditEmployeeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Notifications\NotificationsListView.xaml.cs">
       <DependentUpon>NotificationsListView.xaml</DependentUpon>
@@ -88,6 +92,10 @@
       <DependentUpon>PoshtomatsListView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Employees\AddEmployeeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Employees\EditEmployeeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

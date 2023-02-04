@@ -3,12 +3,14 @@ using NovaPoshta.BusinessLogic.Repositories;
 using NovaPoshta.Infrastructure;
 using NovaPoshta.Model;
 using NovaPoshta.Views.Employees;
+using NovaPoshta.Views.Poshtomats;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace NovaPoshta.ViewModels
@@ -28,7 +30,7 @@ namespace NovaPoshta.ViewModels
         public ICommand UpdateEmployeeCommand { get; set; }
         public ICommand SearchEmployeeCommand { get; set; }
         public string SearchString { get; set; }
-        public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser.Name} {AuthenticationService.CurrentUser.LastName}";
+       // public string LoggedUser { get; set; } = $"{AuthenticationService.CurrentUser?.Name} {AuthenticationService.CurrentUser?.LastName}";
 
         ObservableCollection<Employee> employees;
         public ObservableCollection<Employee> Employees
@@ -71,6 +73,15 @@ namespace NovaPoshta.ViewModels
             {
                 _employeesRepository.Delete(SelectedEmployee);
                 Employees.Remove(SelectedEmployee);
+
+            }, (obj) => SelectedEmployee != null);
+            UpdateEmployeeCommand = new RelayCommand((obj) =>
+            {
+                UserControl updatingView = new EditEmployeeView();
+                EditEmployeeViewModel vm = new EditEmployeeViewModel();
+                vm.CurrentEmployee = SelectedEmployee;
+                updatingView.DataContext = vm;
+                Switcher.Switch(updatingView);
 
             }, (obj) => SelectedEmployee != null);
         }
