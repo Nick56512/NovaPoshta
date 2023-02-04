@@ -23,5 +23,11 @@ namespace NovaPoshta.BusinessLogic.Context
         public string Password { get; set; }
 
         public virtual ICollection<Notification> Notification { get; set; }=new HashSet<Notification>();
+
+        [NotMapped]
+        public string FullName
+        {
+            get => $"{LastName} {Name} {Patronymic}";
+        }
     }
 }

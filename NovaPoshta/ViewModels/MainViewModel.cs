@@ -1,4 +1,5 @@
 ﻿
+using NovaPoshta.Infrastrcture;
 using NovaPoshta.Infrastructure;
 using NovaPoshta.Views.Employees;
 using NovaPoshta.Views.HomeView;
@@ -29,6 +30,7 @@ namespace NovaPoshta.ViewModels
         {
             Switcher.ContentArea = this;
             Switcher.Switch(new HomeView());
+            HomeSwitcher.Switch(new EmployeesListView());
         }
 
         public void Navigate(UserControl page)

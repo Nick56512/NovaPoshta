@@ -16,5 +16,7 @@ namespace NovaPoshta.BusinessLogic.Repositories
 
         void SaveChanges();
         Task SaveChangesAsync();
+
+        Task<IQueryable<T>> GetAllAsync();
     }
 }

@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NovaPoshta.Views.Employees"
               xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
+            
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:EmployeesListViewModel></vm:EmployeesListViewModel>
+    </UserControl.DataContext>
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -38,61 +42,60 @@
             
 
         </Border>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="4">
-            <TextBox Style="{StaticResource TextBoxDefaultStyle}" 
-                 Height="30"
-                     Width="570"
-                 VerticalAlignment="Top" Margin="10,0,0,0"></TextBox>
-         
-             <Button Style="{StaticResource LightRedButton}"
+        <TextBox Style="{StaticResource TextBoxDefaultStyle}" 
+                     Grid.ColumnSpan="4"
+                     Grid.Row="1"
+                     Height="30"
+                     VerticalAlignment="Top" Margin="30,0,125,0"
+                     Text="{Binding SearchString}"></TextBox>
+
+        <Button Style="{StaticResource LightRedButton}"
                      VerticalAlignment="Top"
                      Width="50"
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalAlignment="Center"
+                Command="{Binding SearchEmployeeCommand}"
                      >
-                  <Image Source="/Resources/icons/search.png" Width="30"></Image>
-             </Button>
-           
-        </StackPanel>
-        <Button Style="{StaticResource LightRedButton}"  Grid.Column="0" Grid.Row="2" Width="140" Height="30">Сортування</Button>
-        <Button Style="{StaticResource LightRedButton}" Grid.Column="1" Grid.Row="2" Width="140" Height="30">Додати</Button>
+            <Image Source="/Resources/icons/search.png" Width="30"></Image>
+        </Button>
+        <ComboBox Grid.Column="0" Grid.Row="2" Width="140" Height="30" Text="Сортування" IsEditable="True" IsReadOnly="True"
+                  Style="{StaticResource LightComboBox}" SelectedIndex="{Binding SortType}">
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item1">За ПІБ</ComboBoxItem>
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item2">За датою народження</ComboBoxItem>
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item3">За номером телефону</ComboBoxItem>
+            <ComboBoxItem Style="{StaticResource LightComboBoxItem}" Name="Item4">За номером поштомата</ComboBoxItem>
+        </ComboBox>
+        <Button Style="{StaticResource LightRedButton}" Command="{Binding AddEmployeeCommand}" Grid.Column="1" Grid.Row="2" Width="140" Height="30">Додати</Button>
         <Button Style="{StaticResource LightRedButton}" Grid.Column="2" Grid.Row="2" Width="140" Height="30">Редагувати</Button>
-        <Button Style="{StaticResource LightRedButton}" Width="140" Grid.Column="3" Grid.Row="2" Height="30">Видалити</Button>
+        <Button Style="{StaticResource LightRedButton}" Command="{Binding RemoveEmployeeCommand}" Width="140" Grid.Column="3" Grid.Row="2" Height="30">Видалити</Button>
         <DataGrid 
             Grid.Column="0" 
             Grid.Row="3"
             Grid.ColumnSpan="4"
             Style="{StaticResource Grid}"
             ColumnHeaderStyle="{StaticResource ColumnHeader}"
-            RowStyle="{StaticResource Row}">
-
-
-
-
-
+            RowStyle="{StaticResource Row}"
+            ItemsSource="{Binding Employees}">
             <DataGrid.Columns>
-
-                <DataGridTextColumn Header="№"
-                                  
-                                    Binding="{Binding Title}"
-                                    
-                                    />
                 <DataGridTextColumn Header="ПІБ"
-                                    Binding="{Binding Genre}"
+                                    Binding="{Binding FullName}"
                                 
                                     />
                 <DataGridTextColumn Header="Дата народження"
                                      Width="2.5*"
-                                    Binding="{Binding Publisher}"
+                                    Binding="{Binding Path=DateOfBirth, StringFormat=dd.MM.yyyy}"
                                    
                                     >
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Номер телефону"
                                      Width="2*"
-                                    Binding="{Binding Author}">
+                                    Binding="{Binding PhoneNumber}">
                 </DataGridTextColumn>
                 <DataGridTextColumn
                     Header="Поштомат"
                      Width="2*"
-                    Binding="{Binding Rating}">
+                    Binding="{Binding Poshtomat.Number}">
                 </DataGridTextColumn>
             </DataGrid.Columns>
 

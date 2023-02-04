@@ -57,5 +57,13 @@ namespace NovaPoshta.BusinessLogic.Repositories
                 SaveChanges();
             });
         }
+
+        public Task<IQueryable<T>> GetAllAsync()
+        {
+            return Task.Run(() =>
+            {
+                return GetAll();
+            });
+        }
     }
 }

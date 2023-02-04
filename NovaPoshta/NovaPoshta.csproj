@@ -69,6 +69,7 @@
     <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
     <Compile Include="ViewModels\AddPoshtomatViewModel.cs" />
     <Compile Include="ViewModels\EditPoshtomatViewModel.cs" />
+    <Compile Include="ViewModels\EmployeesListViewModel.cs" />
     <Compile Include="ViewModels\PoshtomatsListViewModel.cs" />
     <Compile Include="Views\Employees\AddEmployeeView.xaml.cs">
       <DependentUpon>AddEmployeeView.xaml</DependentUpon>
