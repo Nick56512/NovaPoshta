@@ -5,6 +5,7 @@ using NovaPoshta.Model;
 using NovaPoshta.Views.Employees;
 using NovaPoshta.Views.HomeView;
 using NovaPoshta.Views.Login;
+using NovaPoshta.Views.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +27,16 @@ namespace NovaPoshta.ViewModels
                 MainViewModel model= (Switcher.ContentArea as MainViewModel);
                 IHavePassword pass=(model.CurrentView as IHavePassword);
                 string password = pass.GetPassword();
+                Switcher.Switch(new AuthorizationProcess());
                 Employee employee= await AuthenticationService.LoginAsync(Login, password);
                 if(employee != null)
                 {
                     Switcher.Switch(new HomeView());
                     HomeSwitcher.Switch(new EmployeesListView());
+                }
+                else
+                {
+                    Switcher.Switch(new FailedAuthorization());
                 }
             });
         }

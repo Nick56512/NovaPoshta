@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaPoshta", "NovaPoshta\No
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaPoshta.BusinessLogic", "NovaPoshta.BusinessLogic\NovaPoshta.BusinessLogic.csproj", "{22E96F2D-047C-4720-8CE8-392335995FC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaPoshta.Admin", "NovaPoshta.Admin\NovaPoshta.Admin.csproj", "{29D1F8AD-1F7B-4559-937E-AD085473CEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaPoshta.UnitTest", "NovaPoshta.UnitTest\NovaPoshta.UnitTest.csproj", "{12D5BF24-5321-4491-990D-33EE054C2473}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{22E96F2D-047C-4720-8CE8-392335995FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E96F2D-047C-4720-8CE8-392335995FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E96F2D-047C-4720-8CE8-392335995FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D1F8AD-1F7B-4559-937E-AD085473CEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D1F8AD-1F7B-4559-937E-AD085473CEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D1F8AD-1F7B-4559-937E-AD085473CEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D1F8AD-1F7B-4559-937E-AD085473CEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D5BF24-5321-4491-990D-33EE054C2473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D5BF24-5321-4491-990D-33EE054C2473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D5BF24-5321-4491-990D-33EE054C2473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D5BF24-5321-4491-990D-33EE054C2473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

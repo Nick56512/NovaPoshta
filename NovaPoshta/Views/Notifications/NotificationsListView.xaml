@@ -5,7 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NovaPoshta.Views.Notifications"
              mc:Ignorable="d" 
+              xmlns:vm="clr-namespace:NovaPoshta.ViewModels"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:NotificationListViewModel></vm:NotificationListViewModel>
+    </UserControl.DataContext>
     <Grid>
        
         <Border Style="{StaticResource WhiteBorder}">
@@ -17,28 +21,28 @@
 
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                         <Image Source="/Resources/icons/man.png" HorizontalAlignment="Right" Width="50"></Image>
-                        <TextBlock Style="{StaticResource Paragraph}" Margin="5">Прізвище Ім'я</TextBlock>
+                        <TextBlock Style="{StaticResource Paragraph}" Margin="5" Text="{Binding LoggedUser}"></TextBlock>
                     </StackPanel>
                 </DockPanel>
 
                 <ListView
                     Margin="0,10,0,0"
-               
+                    ItemsSource="{Binding Notifications}"
                   BorderBrush="Red"
-                  BorderThickness="0,0,0,2">
+                  BorderThickness="0,0,0,2"
+                    SelectionMode="Extended">
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <DockPanel Background="LightGray">
                                 <Image Source="/NovaPoshta;component/Resources/icons/history.png" Width="40"></Image>
                                 <StackPanel>
-                                    <TextBlock>JJJJJJ</TextBlock>
+                                   
                                 </StackPanel>
                             </DockPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                    <ListViewItem></ListViewItem>
-                    <ListViewItem></ListViewItem>
+                 
                 </ListView>
             </StackPanel>
 

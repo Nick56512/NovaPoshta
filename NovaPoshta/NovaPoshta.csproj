@@ -72,12 +72,19 @@
     <Compile Include="ViewModels\EditEmployeeViewModel.cs" />
     <Compile Include="ViewModels\EditPoshtomatViewModel.cs" />
     <Compile Include="ViewModels\EmployeesListViewModel.cs" />
+    <Compile Include="ViewModels\NotificationListViewModel.cs" />
     <Compile Include="ViewModels\PoshtomatsListViewModel.cs" />
     <Compile Include="Views\Employees\AddEmployeeView.xaml.cs">
       <DependentUpon>AddEmployeeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Employees\EditEmployeeView.xaml.cs">
       <DependentUpon>EditEmployeeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Messages\AuthorizationProcess.xaml.cs">
+      <DependentUpon>AuthorizationProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Messages\FailedAuthorization.xaml.cs">
+      <DependentUpon>FailedAuthorization.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Notifications\NotificationsListView.xaml.cs">
       <DependentUpon>NotificationsListView.xaml</DependentUpon>
@@ -140,6 +147,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Messages\AuthorizationProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Messages\FailedAuthorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Notifications\NotificationsListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

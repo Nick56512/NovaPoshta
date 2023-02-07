@@ -101,3 +101,7 @@ C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Poshtomats\EditPoshtomat
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\NovaPoshta.csproj.SuggestedBindingRedirects.cache
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\EditEmployeeView.g.cs
 C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Employees\EditEmployeeView.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Messages\AuthorizationProcess.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Messages\FailedAuthorization.g.cs
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Messages\AuthorizationProcess.baml
+C:\NovaPoshtaRepo\NovaPoshta\NovaPoshta\obj\Debug\Views\Messages\FailedAuthorization.baml
