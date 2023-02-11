@@ -30,8 +30,12 @@ namespace NovaPoshta.ViewModels
                     IQueryable<Notification> query = (await _repository
                         .GetAllAsync())
                         .Where(x => x.EmployeeId == AuthenticationService.CurrentUser.Id);
-
-                    Notifications = new ObservableCollection<Notification>(query.Take(4));
+                    
+                    Notifications = new ObservableCollection<Notification>(
+                        query
+                        .ToArray()
+                        .Where(x=>DateTime.Now<x.DueTime)
+                        .Take(4));
                 }
 
             });
